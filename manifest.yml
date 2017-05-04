@@ -1,7 +1,7 @@
 applications:
 - disk_quota: 1024M
-  host: vvk17-P01
-  name: vvk17-P01-master-template
+  host: vvk17-P99
+  name: vvk17-P99-master-template
   path: .
   domain: mybluemix.net
   instances: 1
