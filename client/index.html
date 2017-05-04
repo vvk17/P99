@@ -1,111 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="template">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Angular + Bootstrap Template</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./myButton.css">
+    <title>Неожиданное путешествие</title>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body ng-controller="MainCtrl">
+  <body>
     <div class="container">
-
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>Angular + Bootstrap Template</h1>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          Hello World
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>Top Games from Twitch</h1>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <button class="myButton" ng-click="twitch()">Get Games Now</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <table class="table table-stripped">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Channels</th>
-                <th>Name</th>
-                <th>Art</th>
-                <th>Popularity</th>
-            </thead>
-            <tbody>
-              <tr ng-repeat="game in games track by $index">
-                <td>{{$index+1}}</td>
-                <td>{{game.channels}}</td>
-                <td>{{game.game.name}}</td>
-                <td><img src="{{game.game.box.small}}"></td>
-                <td>{{game.game.popularity}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-4">
-          <div>
-           {{x}}
-           {{y}}
-           {{nums}}
-           {{expr}}
-           {{expr_01}}
-          </div>
-        </div>
-
-        <div class="col-xs-4">
-          <ul ng-repeat="num in nums track by $index">
-            <li>Number {{num}} with square {{num*num}}</li>
-          </ul>
-        </div>
-
-        <div class="col-xs-4">
-           <ul ng-repeat="id in id_01 track by $index">
-            <li>Это {{id}}!</li>
-           </ul>
-        </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-4"></div>
-          <div class="col-xs-4">
-            <input type="number" ng-model="numb">
-            <button ng-click="add()">Add</button>
-          </div>
-          <div class="col-xs-4">
-            <input type="string" ng-model="idchr">
-            <button ng-click="addone()">Add string</button>
-          </div>
-        </div>
-
+      <h1>Неожиданное путешествие</h1>
+      <a class="btn" href="#">Начинаем ?</a>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-    <script src="/vendor/lodash.min.js"></script>
-    <script src="/vendor/moment-with-locales.min.js"></script>
-    <script src="/vendor/highcharts.js"></script>
-    <script src="/vendor/webcam.js"></script>
-    <script src="/vendor/recorder.js"></script>
-    <script src="/vendor/utilities.js"></script>
-    <script src="/index.js"></script>
   </body>
 </html>
