@@ -45,13 +45,14 @@ h1 {
 a.btn {
   background: linear-gradient(45deg, rgba(100,120,115,0.65) 0%,rgba(150,160,140,0.65) 50%,rgba(108,108,108,0.65) 100%);
   border-radius : 2px;
+  border: 10px;
   box-shadow: 2px 2px 5px rgba(34,62,66,.5);
   color : #ded;
   font-size : 18px;
   letter-spacing: 1px;
   padding : 16px 48px;
   text-decoration : none;
-//  text-transform : uppercase;
+
   -webkit-transition : box-shadow 1s ease;
   transition : box-shadow 1s ease;
 }
