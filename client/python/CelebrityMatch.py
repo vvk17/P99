@@ -70,16 +70,26 @@ def compare(dict1, dict2):
           compared_data[keys] = abs(dict1[keys] - dict2[keys])
   return compared_data
 
+def get_twitter_id (who) :
+  twitter_id = raw_input ("Enter twitter id of "+who+" : ")
+  print twitter_id
+
+  return twitter_id
+
 #The two Twitter handles
-user_handle = "@V12345Valery"
-celebrity_handle = "@CharlizeAfrica"
+#user_handle = "@V12345Valery"
+user_handle = get_twitter_id("you")
+#celebrity_handle = "@CharlizeAfrica"
+celebrity_handle = get_twitter_id("celebrity")
 
 #Analyze the user's tweets using the Watson PI API
 user_result = analyze(user_handle)
+print user_result
 celebrity_result = analyze(celebrity_handle)
 
 #Flatten the results received from the Watson PI API
 user = flatten(user_result)
+print user
 celebrity = flatten(celebrity_result)
 
 #Compare the results of the Watson PI API by calculating
@@ -92,7 +102,7 @@ sorted_results = sorted(compared_results.items(), key=operator.itemgetter(1))
 
 #Print the results to the user
 for keys, value in sorted_results[:50]:
-  print repr(keys).rjust(25),' | {0:4.1f}% | {1:4.1f}% | {2:4.1f}%'.zfill(4).format(user[keys]*100,celebrity[keys]*100,compared_results[keys]*100)
+  print repr(keys).rjust(25),' | {0:5.1f}% | {1:5.1f}% | {2:5.1f}%'.zfill(4).format(user[keys]*100,celebrity[keys]*100,compared_results[keys]*100)
 #  print keys ,
 #  print (user[keys]),
 #  print (' | -> '),
